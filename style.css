@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.heading{
+    position: absolute;
+    top: 60px;
+    font-size: 40px;
+}
+a{
+    color: yellow;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2a2f3b;
+    color: white;
+}
+.container{
+    width: 400px;
+    overflow: hidden;
+}
+
+.text-item{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+
+}
+
+.first-text{
+    color: white;
+}
+
+.second-text{
+    color: #00ff00;
+}
+.second-text::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #2a2f3b;
+    height: 100%;
+    width: 100%;
+    animation: 4s steps(12) infinite Animation;
+    border-left: 2px solid #00ff00;
+}
+
+@keyframes Animation{
+    100%{
+        left: 0;
+    }
+    40%, 60%{
+        left: calc(100% + 4px );
+    }
+}
